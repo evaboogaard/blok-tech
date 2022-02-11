@@ -1,0 +1,16 @@
+{
+  "name": "matching",
+  "version": "8.3.1",
+  "description": "zo'n spreekwoordelijk baalmomentje",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Eva Boogaard",
+  "license": "",
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2"
+  }
+}
