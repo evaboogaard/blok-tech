@@ -1,0 +1,58 @@
+/*
+###############
+          GENERAL STYLING
+###############
+*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --shadow-color: rgb(117, 117, 117);
+    --input-color: rgb(161, 161, 161);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* file add styling */
+#pictures,
+#videos,
+#audio{
+    display: none;
+}
+
+.createprofile3{
+    margin: 2em;
+}
+
+.fileinput{
+    background-color: var(--input-color);
+    display: flex;
+    padding: 2em;
+    margin: .5em;
+    width: 5em;
+    height: 5em;
+    border-radius: .3em;
+    box-shadow: 0 .1em .5em var(--shadow-color);
+}
