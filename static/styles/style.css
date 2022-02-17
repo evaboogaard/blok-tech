@@ -18,9 +18,12 @@
 :root{
     --shadow-color: rgb(117, 117, 117);
     --input-color: rgb(161, 161, 161);
+    --background-color: rgb(130, 179, 235);
 }
 
-
+body{
+    background-color: var(--background-color);
+}
 
 
 
