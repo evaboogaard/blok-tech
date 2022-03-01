@@ -19,13 +19,18 @@ Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this pr
 - [📦 Sources](https://github.com/evaboogaard/blok-tech#-sources)
 
 ## 🎨 Description
+This is a mobile application for artists of different disciplines to find each other and work together. Making money in the creative field is difficult - but gets a lot easier if you work together. A graphic designer can be incredibly useful for an artist that created sculptures; a violin player might need a painter to put the music into visuals; or a web designer can create something beautiful for a make-up artist that just can't get their work out there.
 
 ## 🧙‍♂ ‍Installation Guide
+Do I look like I know what I'm doing?? lmao
 
 ## 🚫 Rules
+PLEASE DON'T YELL AT ME!
 
 ## 🗄 Database
+It's where you base your data
 
 ## 🖥 License
+<img  width="500px" alt="" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmobile.twitter.com%2Fsveta_choukou&psig=AOvVaw3ctRhRA9tRJkKyT2_Mxcbg&ust=1646243408131000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJi-xt68pfYCFQAAAAAdAAAAABAR">
 
 ## 📦 Sources
