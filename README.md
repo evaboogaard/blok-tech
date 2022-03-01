@@ -3,6 +3,10 @@
 Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this project I will be creating a single interaction within a matching application. Feel free to look around or check out the [wiki](https://github.com/evaboogaard/blok-tech/wiki), which contains a lot of information about the process.
 
 <section align="center">
+<img width="500px" alt="" src="https://user-images.githubusercontent.com/94062754/156223856-9e7bb4f2-2f4e-476a-8f8f-1c878ed22167.png">
+</section>
+
+<section align="center">
       <a href="https://github.com/evaboogaard/blok-tech/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/evaboogaard/blok-tech"></a>
       <a href="https://github.com/evaboogaard/blok-tech/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/evaboogaard/blok-tech"</a>
       <a href="https://github.com/evaboogaard/blok-tech/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/evaboogaard/blok-tech"></a>
@@ -25,10 +29,10 @@ This is a mobile application for artists of different disciplines to find each o
 Do I look like I know what I'm doing?? lmao
 
 ## 🚫 Rules
-PLEASE DON'T YELL AT ME!
+DON'T YELL!
 
 ## 🗄 Database
-It's where you base your data
+It's where you base your data. yw
 
 ## 🖥 License
 <section align="center">
