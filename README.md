@@ -32,7 +32,7 @@ It's where you base your data
 
 ## 🖥 License
 <section align="center">
-      <img width="500px" alt="" src="https://i.imgflip.com/5dqrsw.jpg">
+      <img width="300px" alt="" src="https://i.imgflip.com/5dqrsw.jpg">
 </section>
 
 ## 📦 Sources
