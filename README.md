@@ -29,12 +29,15 @@ This is a mobile application for artists of different disciplines to find each o
 Do I look like I know what I'm doing?? lmao
 
 ## 🚫 Rules
-DON'T YELL!
+1. DON'T YELL!
+2. If you read this, send me a meme (I'll know if you don't)
 
 ## 🗄 Database
-It's where you base your data. yw
+The database used for the creation of this application is [MongoDB.](https://www.mongodb.com/)
 
 ## 🖥 License
+[MIT License](https://github.com/evaboogaard/blok-tech/blob/main/LICENSE.md)
+
 <section align="center">
       <img width="300px" alt="" src="https://i.imgflip.com/5dqrsw.jpg">
 </section>
