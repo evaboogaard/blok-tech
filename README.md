@@ -31,6 +31,6 @@ PLEASE DON'T YELL AT ME!
 It's where you base your data
 
 ## 🖥 License
-<img  width="500px" alt="" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmobile.twitter.com%2Fsveta_choukou&psig=AOvVaw3ctRhRA9tRJkKyT2_Mxcbg&ust=1646243408131000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJi-xt68pfYCFQAAAAAdAAAAABAR">
+<img align="center" width="500px" alt="" src="https://i.imgflip.com/5dqrsw.jpg">
 
 ## 📦 Sources
