@@ -1,3 +1,25 @@
 {{>header}}
 
-{{>footer}}
+<form action="pages/createprofile2.html" id="createprofile1">
+    <label for="fname">First name</label>
+    <input type="text" id="fname" name="fname">
+
+    <label for="email">Email Address</label>
+    <input type="text" id="email" name="email">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+
+    <label for="date">Date of Birth</label>
+    <input type="date" id="date" name="date">
+
+    <label for="country">Country</label>
+    <input type="text" id="country" name="country">
+
+    <p>Profile Photo</p>
+    <label for="profilephoto" class="fileinput"></label>
+    <input type="file" accept="image/*" id="profilephoto" name="profilephoto" class="invisible">
+
+</form>
+
+<button type="submit" form="createprofile1">Next</button>
