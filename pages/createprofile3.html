@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Profile</title>
-    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../static/styles/style.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,15 +16,15 @@
         <form action="#" id="createprofile3">
             <p>Add Pictures</p>
             <label for="pictures" class="fileinput one"></label>
-            <input type="file" accept="image/*" id="pictures" name="pictures" multiple>
+            <input type="file" accept="image/*" id="pictures" name="pictures" class="invisible" multiple>
 
             <p>Add Videos</p>
             <label for="videos" class="fileinput two"></label>
-            <input type="file" accept="video/*" id="videos" name="videos" multiple>
+            <input type="file" accept="video/*" id="videos" name="videos" class="invisible" multiple>
 
             <p>Add Audio</p>
             <label for="audio" class="fileinput three"></label>
-            <input type="file" accept="audio/*" id="audio" name="audio" multiple>
+            <input type="file" accept="audio/*" id="audio" name="audio" class="invisible" multiple>
         </form>
 
         <button type="submit" form="createprofile3">Next</button>

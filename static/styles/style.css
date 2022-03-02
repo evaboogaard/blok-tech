@@ -17,13 +17,68 @@
 
 :root{
     --shadow-color: rgb(117, 117, 117);
-    --input-color: rgb(161, 161, 161);
-    --background-color: rgb(130, 179, 235);
+    --input-color: #F4F5F8;
+    --header-color: #D3D6E6;
+    --background-color: white;
+    --button-color: #8692B9;
 }
 
 body{
     background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-color);
+}
+
+h1{
+    padding: 1em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em 0 2em;
+    max-width: 30em;
+}
+
+label{
+    margin: 1em 0 .3em 0;
+}
+
+input{
+    background-color: var(--input-color);
+    border-radius: 1.2em;
+    padding: 1.5em 1em 1.5em 1em;
+    width: 100%;
+    border: 0;
+    box-shadow: .3em .3em .6em var(--shadow-color);
+}
+
+form p{
+    margin: 1em 0 0 0;
+}
+
+button{
+    padding: 1em 3em 1em 3em;
+    margin: 2em 3em 1em 3em;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--button-color);
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+}
+
 
 
 
@@ -39,9 +94,7 @@ body{
 
 
 /* file add styling */
-#pictures,
-#videos,
-#audio{
+.invisible{
     display: none;
 }
 
@@ -53,7 +106,7 @@ body{
     background-color: var(--input-color);
     display: flex;
     padding: 2em;
-    margin: .5em;
+    margin: .5em 0 .5em 0;
     width: 5em;
     height: 5em;
     border-radius: .3em;
