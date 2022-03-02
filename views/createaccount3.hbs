@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Profile</title>
-    <link href="../static/styles/style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Create Profile</h1>
-    </header>
+{{>header}}
 
-    <main>
-        <form action="#" id="createprofile3">
+<form action="#" id="createaccount3">
             <p>Add Pictures</p>
             <label for="pictures" class="fileinput one"></label>
             <input type="file" accept="image/*" id="pictures" name="pictures" class="invisible" multiple>
@@ -27,9 +14,4 @@
             <input type="file" accept="audio/*" id="audio" name="audio" class="invisible" multiple>
         </form>
 
-        <button type="submit" form="createprofile3">Next</button>
-
-    </main>
-
-</body>
-</html>
+        <button type="submit" form="createaccount3">Next</button>

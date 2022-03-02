@@ -15,71 +15,131 @@
     padding: 0;
 }
 
-:root{
-    --shadow-color: rgb(117, 117, 117);
+:root {
     --input-color: #F4F5F8;
     --header-color: #D3D6E6;
     --background-color: white;
     --button-color: #8692B9;
+    --tag-color: #E2E2E2;
+    --checkbox-color: #D3D6E6;
+    --shadow: .2em .2em .4em rgba(117, 117, 117, 0.842);
 }
 
-body{
+body {
     background-color: var(--background-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     background-color: var(--header-color);
 }
 
-h1{
+h1 {
     padding: 1em;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-}
-
-form{
+form {
     display: flex;
     flex-direction: column;
     padding: 1em 2em 0 2em;
     max-width: 30em;
 }
 
-label{
+label {
     margin: 1em 0 .3em 0;
 }
 
-input{
+input {
     background-color: var(--input-color);
     border-radius: 1.2em;
     padding: 1.5em 1em 1.5em 1em;
     width: 100%;
     border: 0;
-    box-shadow: .3em .3em .6em var(--shadow-color);
+    box-shadow: var(--shadow);
 }
 
-form p{
+form p {
     margin: 1em 0 0 0;
 }
 
-button{
+button {
     padding: 1em 3em 1em 3em;
-    margin: 2em 3em 1em 3em;
+    margin: 3em 0 0 50%;
     border-radius: 2em;
     border: none;
+    width: 60%;
     background-color: var(--button-color);
     font-size: 1.3em;
     color: white;
     font-weight: 600;
+    transform: translate(-50%, -50%);
 }
 
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+#createaccount2 input {
+    box-shadow: none;
+}
+
+.tag {
+    background-color: var(--tag-color);
+    position: relative;
+    height: 3.5em;
+    width: 10.5em;
+    margin: .2em;
+    border-radius: .3em;
+}
+
+.tag label,
+.tag input,
+.checkboxwide input,
+.checkboxwide label {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.tag label {
+    top: 1.2em;
+    left: 2.4em;
+}
+
+.tag input {
+    left: .6em;
+    top: 1.4em;
+    height: 1.4em;
+    width: 1.4em;
+}
+
+.checkboxwide {
+    width: 100%;
+    background-color: var(--checkbox-color);
+    height: 3.5em;
+    margin: .8em 0 .8em 0;
+    position: relative;
+    border-radius: .3em;
+    box-shadow: var(--shadow);
+}
+
+.checkboxwide input {
+position: absolute;
+width: 1.3em;
+height: 1.3em;
+right: 2.5em;
+top: 1.5em;
+}
+
+.checkboxwide label {
+position: absolute;
+left: 1.3em;
+top: 1.1em;
+}
 
 
 
@@ -94,15 +154,15 @@ button{
 
 
 /* file add styling */
-.invisible{
+.invisible {
     display: none;
 }
 
-.createprofile3{
+.createprofile3 {
     margin: 2em;
 }
 
-.fileinput{
+.fileinput {
     background-color: var(--input-color);
     display: flex;
     padding: 2em;
