@@ -1,7 +1,6 @@
 const express = require("express")
 const { engine } = require("express-handlebars")
 const app = express()
-const router = express.Router();
 
 const path = require("path")
 // const slug = require("slug")
@@ -25,46 +24,31 @@ app.set("views", "./views")
 
 // basic routing
 app.get("/", (req, res) => {
-    res.render("createaccount")
+    res.render("createaccount",{"title": "create account"})
 })
 
-app.get("/createaccount2", (req, res) => {
-    res.render("createaccount2")
+app.get("/account", (req, res) => {
+    res.render("account")
 })
 
-app.get("/createaccount3", (req, res) => {
-    res.render("createaccount3")
+app.post("/account", (req, res) => {
+    // .push({
+    //     fname: req.body.fname,
+    //     country: req.body.country
+    // })
+
+    // console.log(req.body.fname)
+    // res.redirect("/account")
+
+    res.send("Name:" + req.body.fname)
 })
 
-router.post('/', function(req, res){
-    //Grab the request body
-    var body = req.body;
-     
-    var res_body = {
-    first_name: body.first_name,
-    last_name: body.last_name,
-    email: body.email
-    };
-     
-    res.render('account', res_body);
-    });
-     
-    module.exports = router;
 
-// app.get("/account", (req, res) => {
-//     res.render("account")
-// })
 
-// app.post("/", (req, res) => {
-//     data.push({
-//         id: id,
-//         name: req.body.fname,
-//         country: req.body.country
-//     })
 
-//     res.redirect("/" + id)
 
-// })
+
+
 
 //error handling
 app.use((req, res) => {

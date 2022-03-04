@@ -83,11 +83,30 @@ button {
     flex-wrap: wrap;
 }
 
-#createaccount2 input {
+.terms {
     box-shadow: none;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    position: relative;
+    margin: 1em 0 1em 0;
 }
 
-.tag {
+.terms input,
+.terms label{
+    position: absolute;
+    width: 1em;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+}
+
+.terms label{
+    width: auto;
+    left: 10%;
+}
+
+/* .tag {
     background-color: var(--tag-color);
     position: relative;
     height: 3.5em;
@@ -115,9 +134,9 @@ button {
     top: 1.4em;
     height: 1.4em;
     width: 1.4em;
-}
+} */
 
-.checkboxwide {
+/* .checkboxwide {
     width: 100%;
     background-color: var(--checkbox-color);
     height: 3.5em;
@@ -139,7 +158,7 @@ top: 1.5em;
 position: absolute;
 left: 1.3em;
 top: 1.1em;
-}
+} */
 
 
 
@@ -154,7 +173,7 @@ top: 1.1em;
 
 
 /* file add styling */
-.invisible {
+/* .invisible {
     display: none;
 }
 
@@ -171,4 +190,4 @@ top: 1.1em;
     height: 5em;
     border-radius: .3em;
     box-shadow: 0 .1em .5em var(--shadow-color);
-}
+} */
