@@ -1,6 +1,6 @@
 # blok-tech
 
-Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this project I will be creating a single interaction within a matching application. Feel free to look around or check out the [wiki](https://github.com/evaboogaard/blok-tech/wiki), which contains a lot of information about the process.
+Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this project I will be creating a specific feature within a matching application. Feel free to look around or check out the [wiki](https://github.com/evaboogaard/blok-tech/wiki), which contains a lot of information about the process.
 
 <section align="center">
 <img width="500px" alt="" src="https://user-images.githubusercontent.com/94062754/156223856-9e7bb4f2-2f4e-476a-8f8f-1c878ed22167.png">
