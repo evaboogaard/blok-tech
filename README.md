@@ -30,20 +30,15 @@ In the creative field artists could greatly benefit from working with other art 
 For example: a graphic designer can be incredibly useful for an artist that created sculptures; a violin player might need a painter to put the music into visuals; or a web designer can create something beautiful for a make-up artist that just can't get their work out there.
 
 ## 🧙‍♂ ‍Installation Guide
-Do I look like I know what I'm doing?? lmao
+-
 
 ## 🚫 Rules
-1. DON'T YELL!
-2. If you read this, send me a meme (I'll know if you don't)
+If you read this, send me a meme (I'll know if you don't)
 
 ## 🗄 Database
 The database used for the creation of this application is [MongoDB.](https://www.mongodb.com/)
 
 ## 🖥 License
 [MIT License](https://github.com/evaboogaard/blok-tech/blob/main/LICENSE.md)
-
-<section align="center">
-      <img width="300px" alt="" src="https://i.imgflip.com/5dqrsw.jpg">
-</section>
 
 ## 📦 Sources
