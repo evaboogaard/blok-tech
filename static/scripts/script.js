@@ -1,6 +1,6 @@
 const terms = document.querySelector("#terms")
-
 const form = document.querySelector("form")
+const fullTermsAndCons = document.querySelector(".terms")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault()
@@ -8,7 +8,7 @@ form.addEventListener("submit", (event) => {
 		event.target.submit()
 	}
 	else{
-		// form.classList.add("error")
+		fullTermsAndCons.classList.add("error")
         console.log("tick the box baby")
 	}
 });

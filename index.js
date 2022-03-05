@@ -1,14 +1,14 @@
-const express = require("express")
-const { engine } = require("express-handlebars")
-const app = express()
+const express = require("express");
+const { engine } = require("express-handlebars");
+const app = express();
 
-const path = require("path")
-// const slug = require("slug")
-const bodyParser = require("body-parser")
+const path = require("path");
+// const slug = require("slug");
+const bodyParser = require("body-parser");
 
 
-app.use(express.static(path.join(__dirname, "/static")))
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, "/static")));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.engine(
     "hbs",
@@ -17,43 +17,36 @@ app.engine(
         extname: ".hbs",
         defaultLayout: 'main',
         partialsDir: __dirname + "/views/partials",
-    }))
+    }));
 
-app.set('view engine', ".hbs")
-app.set("views", "./views")
+app.set('view engine', ".hbs");
+app.set("views", "./views");
 
 // basic routing
 app.get("/", (req, res) => {
-    res.render("createaccount",{"title": "create account"})
-})
+    res.render("createaccount",{"title": "create account"});
+});
 
 app.get("/account", (req, res) => {
-    res.render("account")
-})
+    res.render("account");
+});
 
 app.post("/account", (req, res) => {
     // .push({
     //     fname: req.body.fname,
     //     country: req.body.country
-    // })
+    // });
 
-    // console.log(req.body.fname)
-    // res.redirect("/account")
+    // console.log(req.body.fname);
+    // res.redirect("/account");
 
-    res.send("Name:" + req.body.fname)
+    res.send("Name:" + req.body.fname + req.body.lname);
 })
-
-
-
-
-
-
-
 
 //error handling
 app.use((req, res) => {
-    res.status(404).send("Sorry, this page doesn't exist!")
-})
+    res.status(404).send("Sorry, this page doesn't exist!");
+});
 
 //port
-app.listen(3000)
+app.listen(3000);
