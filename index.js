@@ -6,6 +6,9 @@ const path = require("path");
 // const slug = require("slug");
 const bodyParser = require("body-parser");
 
+const port = 3000;
+
+
 
 app.use(express.static(path.join(__dirname, "/static")));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -48,5 +51,6 @@ app.use((req, res) => {
     res.status(404).send("Sorry, this page doesn't exist!");
 });
 
-//port
-app.listen(3000);
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+  });
