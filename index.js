@@ -10,7 +10,7 @@ const path = require("path");
 // const slug = require("slug");
 const bodyParser = require("body-parser");
 const router = express.Router();
-const port = process.env.PORT; //|| 1337;
+const port = process.env.PORT || 1337;
 
 const mongoose = require("mongoose");
 
