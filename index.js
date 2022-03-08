@@ -6,7 +6,7 @@ const path = require("path");
 // const slug = require("slug");
 const bodyParser = require("body-parser");
 
-const port = 3000;
+const port = process.env.PORT || 1337;
 
 
 
@@ -42,8 +42,9 @@ app.post("/account", (req, res) => {
 
     // console.log(req.body.fname);
     // res.redirect("/account");
+    res.render("account", {firstname: req.body.fname});
 
-    res.send("Name:" + req.body.fname + req.body.lname);
+    // res.send("Name:" + req.body.fname + req.body.lname);
 })
 
 //error handling
