@@ -1,5 +1,7 @@
 const express = require("express");
-const { engine } = require("express-handlebars");
+const {
+    engine
+} = require("express-handlebars");
 const app = express();
 
 const path = require("path");
@@ -11,7 +13,9 @@ const port = process.env.PORT || 1337;
 
 
 app.use(express.static(path.join(__dirname, "/static")));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.engine(
     "hbs",
@@ -27,7 +31,9 @@ app.set("views", "./views");
 
 // basic routing
 app.get("/", (req, res) => {
-    res.render("createaccount",{"title": "create account"});
+    res.render("createaccount", {
+        "title": "create account"
+    });
 });
 
 app.get("/account", (req, res) => {
@@ -35,16 +41,12 @@ app.get("/account", (req, res) => {
 });
 
 app.post("/account", (req, res) => {
-    // .push({
-    //     fname: req.body.fname,
-    //     country: req.body.country
-    // });
+    res.render("account", {
+        firstname: req.body.fname,
+        lastname: req.body.lname,
+        country: req.body.country
+    });
 
-    // console.log(req.body.fname);
-    // res.redirect("/account");
-    res.render("account", {firstname: req.body.fname});
-
-    // res.send("Name:" + req.body.fname + req.body.lname);
 })
 
 //error handling
@@ -54,4 +56,4 @@ app.use((req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
-  });
+});
