@@ -7,6 +7,8 @@ const app = express();
 const path = require("path");
 // const slug = require("slug");
 const bodyParser = require("body-parser");
+const router = express.Router();
+
 
 const port = process.env.PORT || 1337;
 
@@ -57,3 +59,5 @@ app.use((req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
+
+module.exports = router;
