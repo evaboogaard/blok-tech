@@ -1,5 +1,3 @@
-require('dotenv-extended').load()
-
 const express = require("express");
 const {
     engine
