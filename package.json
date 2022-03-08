@@ -4,7 +4,7 @@
   "description": "zo'n spreekwoordelijk baalmomentje",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Eva Boogaard",
