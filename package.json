@@ -1,7 +1,10 @@
 {
   "name": "matching",
   "version": "8.3.1",
-  "description": "zo'n spreekwoordelijk baalmomentje",
+  "engines": {
+    "node": "12.11.1"
+  },
+  "description": "matching application for project-tech",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
