@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const {
     engine
@@ -8,10 +10,20 @@ const path = require("path");
 // const slug = require("slug");
 const bodyParser = require("body-parser");
 const router = express.Router();
-
-
 const port = process.env.PORT || 1337;
 
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+const db = mongoose.connection;
+
+db.on("error", (error) => console.error(error));
+db.once("open", () => console.log("Connected to Database"));
+
+app.use(express.json());
+
+const usersRouter = require("./routes/users");
+app.use("/users", usersRouter);
 
 
 app.use(express.static(path.join(__dirname, "/static")));
@@ -38,8 +50,16 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/login", (req, res) => {
+    res.render("login", {
+        "title": "login"
+    });
+});
+
 app.get("/account", (req, res) => {
-    res.render("account");
+    res.render("account", {
+        "title": "account"
+    });
 });
 
 app.post("/account", (req, res) => {

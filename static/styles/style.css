@@ -109,6 +109,7 @@ body {
             var(--mint));
     background-size: 400% 400%;
     animation: bg-animation 15s ease infinite;
+    height: 26em;
 }
 
 @keyframes bg-animation {
@@ -123,6 +124,10 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -144,6 +149,27 @@ h1 {
     text-align: center;
     color: rgb(0, 0, 0);
 }
+
+nav {
+    position: fixed;
+    bottom: 0;
+    height: 7em;
+    background-color: #ffffffb9;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    background-color: #3fa3ca;
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+}
+
+
 
 form {
     display: flex;
