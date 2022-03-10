@@ -43,16 +43,14 @@ app.engine(
 app.set('view engine', ".hbs");
 app.set("views", "./views");
 
-// basic routing
-app.get("/", (req, res) => {
-    res.render("createaccount", {
-        "title": "create account"
-    });
-});
+app.use('/', require('./routes/users'))
 
-app.post('/', (req,res)=> {
-    console.log(req.body)
-})
+// basic routing
+// app.get("/", (req, res) => {
+//     res.render("createaccount", {
+//         "title": "create account"
+//     });
+// });
 
 app.get("/login", (req, res) => {
     res.render("login", {
@@ -72,7 +70,6 @@ app.post("/account", (req, res) => {
         lastname: req.body.lname,
         country: req.body.country
     });
-
 })
 
 //error handling
