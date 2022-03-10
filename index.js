@@ -64,14 +64,6 @@ app.get("/account", (req, res) => {
     });
 });
 
-app.post("/account", (req, res) => {
-    res.render("account", {
-        firstname: req.body.fname,
-        lastname: req.body.lname,
-        country: req.body.country
-    });
-})
-
 //error handling
 app.use((req, res) => {
     res.status(404).send("Sorry, this page doesn't exist!");

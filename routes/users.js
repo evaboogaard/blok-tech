@@ -15,30 +15,19 @@ router.get('/', (req, res) => res.render('createaccount'))
 // })
 
 
-// Getting all
-router.get("/", async (req, res) => {
-    try {
-        const users = await User.find()
-        res.json(users)
-    } catch (err) {
-        res.status(500).json({
-            message: err.message
-        })
-    }
-});
-
-
-
-// Getting one
-// router.get("/:id", getUser, (req, res) => {
-//     res.json(res.user)
+// // Getting all
+// router.get("/", async (req, res) => {
+//     try {
+//         const users = await User.find()
+//         res.json(users)
+//     } catch (err) {
+//         res.status(500).json({
+//             message: err.message
+//         })
+//     }
 // });
 
-// app.post('/', (req,res)=> {
-//     console.log(req.body)
-// })
-
-// Creating one
+// Creating a user
 router.post("/", async (req, res) => {
     const user = new User({
         fname: req.body.fname,
@@ -48,8 +37,9 @@ router.post("/", async (req, res) => {
         date: req.body.date,
         country: req.body.country
     })
-    console.log('it works')
-
+    res.render("account", {
+        name: user.fname + user.lname
+    })
     try {
         const newUser = await user.save()
         res.status(201).json(newUser)
@@ -59,63 +49,5 @@ router.post("/", async (req, res) => {
         })
     }
 });
-
-// Updating one
-// router.patch("/:id", getUser, async (req, res) => {
-//     if(req.body.fname != null){
-//         res.user.fname = req.body.fname
-//     }
-//     if(req.body.lname != null){
-//         res.user.lname = req.body.lname
-//     }
-//     if(req.body.email != null){
-//         res.user.email = req.body.email
-//     }
-//     if(req.body.password != null){
-//         res.user.password = req.body.password
-//     }
-//     if(req.body.date != null){
-//         res.user.date = req.body.date
-//     }
-//     if(req.body.country != null){
-//         res.user.country = req.body.country
-//     }
-//     try{
-//         const updatedUser = await res.user.save()
-//         res.json(updatedUser)
-//     } catch (err) {
-//         res.status(400).json({message: err.message})
-//     }
-// });
-
-// Deleting one
-// router.delete("/:id", getUser, async (req, res) => {
-//     try {
-//         await res.user.remove()
-//         res.json({message: "deleted user"})
-//     } catch (err) {
-//         res.status(500).json({
-//             message: err.message
-//         })
-//     }
-// });
-
-// async function getUser(req, res, next) {
-//     let user
-//     try {
-//         user = await User.findById(req.params.id)
-//         if (user == null) {
-//             return res.status(404).json({
-//                 message: "cannot find user"
-//             })
-//         }
-//     } catch (err) {
-//         return res.status(500).json({
-//             message: err.message
-//         })
-//     }
-//     res.user = user
-//     next()
-// }
 
 module.exports = router;
