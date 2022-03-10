@@ -320,10 +320,38 @@ button {
 
 /* code inspiration source: https://codepen.io/alphardex/pen/vYEYGzp */
 
+.account{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+}
 
+.accountbutton{
+    padding: 1em 3em 1em 3em;
+    position: absolute;
+    border-radius: 2em;
+    border: none;
+    width: 70%;
+    background-size: 200% 200%;
+    background-position: left top;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+    box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
+}
 
+.accountbutton:first-of-type{
+    top: 40%;
+    background: linear-gradient(var(--pink), var(--peach));
+}
 
-
+.accountbutton:last-of-type{
+    top: 55%;
+    background: linear-gradient(var(--blue), var(--mint));
+}
 
 
 

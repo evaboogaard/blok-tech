@@ -10,22 +10,6 @@ app.use(bodyParser.urlencoded({
 
 router.get('/', (req, res) => res.render('createaccount'))
 
-// router.post('/', (req, res)=> {
-//     console.log(req.body)
-// })
-
-
-// // Getting all
-// router.get("/", async (req, res) => {
-//     try {
-//         const users = await User.find()
-//         res.json(users)
-//     } catch (err) {
-//         res.status(500).json({
-//             message: err.message
-//         })
-//     }
-// });
 
 // Creating a user
 
