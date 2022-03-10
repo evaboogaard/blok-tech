@@ -28,6 +28,7 @@ router.get('/', (req, res) => res.render('createaccount'))
 // });
 
 // Creating a user
+
 router.post("/", async (req, res) => {
     const user = new User({
         fname: req.body.fname,
@@ -37,17 +38,19 @@ router.post("/", async (req, res) => {
         date: req.body.date,
         country: req.body.country
     })
-    res.render("account", {
-        name: user.fname + " " + user.lname
-    })
-    try {
-        const newUser = await user.save()
-        res.status(201).json(newUser)
-    } catch (err) {
-        res.status(400).json({
-            message: err.message
-        })
-    }
+    user.save().then(
+        () => {
+            res.render("account", {
+                name: user.fname + " " + user.lname
+            })
+        }
+    ).catch(
+        (error) => {
+            res.status(400).json({
+                error: error
+            });
+        }
+    );
 });
 
 module.exports = router;
