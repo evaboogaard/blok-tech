@@ -46,11 +46,11 @@ app.set("views", "./views");
 app.use('/', require('./routes/users'))
 
 // basic routing
-// app.get("/", (req, res) => {
-//     res.render("createaccount", {
-//         "title": "create account"
-//     });
-// });
+app.get("/", (req, res) => {
+    res.render("createaccount", {
+        "title": "create account"
+    });
+});
 
 app.get("/login", (req, res) => {
     res.render("login", {

@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
         country: req.body.country
     })
     res.render("account", {
-        name: user.fname + user.lname
+        name: user.fname + " " + user.lname
     })
     try {
         const newUser = await user.save()

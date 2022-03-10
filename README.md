@@ -30,7 +30,21 @@ In the creative field artists could greatly benefit from working with other art 
 For example: a graphic designer can be incredibly useful for an artist that created sculptures; a violin player might need a painter to put the music into visuals; or a web designer can create something beautiful for a make-up artist that just can't get their work out there.
 
 ## 🧙‍♂ ‍Installation Guide
--
+Create a folder in wich you want to place this project. This way you will be able to navigate to the project more easily.
+
+### Clone the repository
+You can install the application either by downloading the ZIP, or if you want to clone it in the CLI; you should run the following code:
+
+gh repo clone evaboogaard/blok-tech
+
+### Install dependencies
+Once you have cloned the repo you need to install the dependencies. You do this by running npm install in the terminal.
+
+### Run Festify
+In order to run the application you need to enter npm start in your terminal. the server will run on port 1337. Your url should look like this: localhost:1337
+
+### Set up your .env
+Set up your .env file for a MongoDB connection, the file should include the following: MongoURI= <YOUR MONGO DB URI>
 
 ## 🚫 Rules
 If you read this, send me a meme (I'll know if you don't)
