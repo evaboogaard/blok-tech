@@ -50,6 +50,10 @@ app.get("/", (req, res) => {
     });
 });
 
+app.post('/', (req,res)=> {
+    console.log(req.body)
+})
+
 app.get("/login", (req, res) => {
     res.render("login", {
         "title": "login"

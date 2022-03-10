@@ -21,6 +21,10 @@ router.get("/", async (req, res) => {
     }
 });
 
+
+
+
+
 // Getting one
 router.get("/:id", getUser, (req, res) => {
     res.json(res.user)
