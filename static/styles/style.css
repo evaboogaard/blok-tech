@@ -324,6 +324,7 @@ button {
     text-align: center;
     font-size: 1.2em;
     font-weight: 400;
+    margin: 0 1em 0 1em;
 }
 
 .accountbutton{
@@ -334,7 +335,7 @@ button {
     width: 70%;
     background-size: 200% 200%;
     background-position: left top;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     transform: translate(-50%, -50%);
@@ -351,6 +352,13 @@ button {
 .accountbutton:last-of-type{
     top: 55%;
     background: linear-gradient(var(--blue), var(--mint));
+}
+
+header a img {
+    width: 3em;
+    position: absolute;
+    left: 7%;
+    top: 28%;
 }
 
 

@@ -47,10 +47,16 @@ app.use('/', require('./routes/users'))
 
 // basic routing
 app.get("/", (req, res) => {
+    res.render("home", {
+        "title": "home"
+    });
+});
+
+app.get("/createaccount", (req, res) => {
     res.render("createaccount", {
         "title": "create account"
     });
-});
+})
 
 app.get("/login", (req, res) => {
     res.render("login", {

@@ -40,8 +40,8 @@ gh repo clone evaboogaard/blok-tech
 ### Install dependencies
 Once you have cloned the repo you need to install the dependencies. You do this by running npm install in the terminal.
 
-### Run Festify
-In order to run the application you need to enter npm start in your terminal. the server will run on port 1337. Your url should look like this: localhost:1337
+### Run Application
+In order to run the application you need to enter npm start in your terminal. Your url should look like this: localhost:1337
 
 ### Set up your .env
 Set up your .env file for a MongoDB connection, the file should include the following: MongoURI= <YOUR MONGO DB URI>

@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-router.get('/', (req, res) => res.render('createaccount'))
+router.get('/', (req, res) => res.render('home'))
 
 
 // Creating a user
