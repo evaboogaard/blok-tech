@@ -66,6 +66,12 @@ app.get("/account", (req, res) => {
     });
 });
 
+app.get("/delete", (req, res) => {
+    res.render("delete", {
+        "title": "delete"
+    });
+});
+
 
 // app.use(passport.initialize());
 // app.use(passport.session());

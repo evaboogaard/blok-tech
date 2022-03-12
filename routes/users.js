@@ -43,13 +43,16 @@ router.post('/login', (req, res) => {
         const email = req.body.email;
         const password = req.body.password;
 
-        User.findOne({email: email, password: password}, function(err, user){
+        User.findOne({
+            email: email,
+            password: password
+        }, function (err, user) {
             if (err) {
                 console.log(err);
                 return res.status(500).send();
             }
 
-            if(!user) {
+            if (!user) {
                 return res.status(404).send("Sorry, user doesn't exist.");
             }
             res.redirect('/account');
@@ -59,5 +62,27 @@ router.post('/login', (req, res) => {
         throw new Error(error);
     }
 })
+
+
+// Deleton
+
+router.post('/delete', (req, res) => {
+    // User.deleteOne({
+    //     id: req.body._id
+    // });
+    // res.redirect('/delete');
+
+    // const email = req.body.email;
+
+    // User.findOneAndDelete({
+    //     email: email
+    // })
+
+    User.findOneAndDelete({id: req.body._id }).then();
+
+    res.redirect('/delete');
+
+});
+
 
 module.exports = router;
