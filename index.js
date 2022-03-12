@@ -1,18 +1,15 @@
 require('dotenv').config();
 
 const express = require("express");
-const {
-    engine
-} = require("express-handlebars");
-const app = express();
-
+const { engine } = require("express-handlebars");
 const path = require("path");
-// const slug = require("slug");
 const bodyParser = require("body-parser");
 const router = express.Router();
-const port = process.env.PORT || 1337;
+// const passport = require('passport')
 
+const port = process.env.PORT || 1337;
 const mongoose = require("mongoose");
+const app = express();
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
@@ -45,18 +42,17 @@ app.set("views", "./views");
 
 app.use('/', require('./routes/users'))
 
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
+    next();
+  });
+
 // basic routing
 app.get("/", (req, res) => {
     res.render("home", {
         "title": "home"
     });
 });
-
-app.get("/createaccount", (req, res) => {
-    res.render("createaccount", {
-        "title": "create account"
-    });
-})
 
 app.get("/login", (req, res) => {
     res.render("login", {
@@ -69,6 +65,10 @@ app.get("/account", (req, res) => {
         "title": "account"
     });
 });
+
+
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 //error handling
 app.use((req, res) => {

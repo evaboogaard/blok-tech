@@ -3,29 +3,28 @@ const app = express();
 const router = express.Router();
 const User = require("../models/user");
 const bodyParser = require("body-parser");
+// const passport = require("passport")
 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-router.get('/', (req, res) => res.render('home'))
+router.get('/createaccount', (req, res) => res.render('createaccount'))
 
-
-// Creating a user
-
-router.post("/", async (req, res) => {
+router.post("/", (req, res) => {
     const user = new User({
         fname: req.body.fname,
         lname: req.body.lname,
         email: req.body.email,
         password: req.body.password,
-        date: req.body.date,
         country: req.body.country
     })
     user.save().then(
         () => {
             res.render("account", {
-                name: user.fname + " " + user.lname
+                name: user.fname + " " + user.lname,
+                email: user.email,
+                country: user.country
             })
         }
     ).catch(
@@ -36,5 +35,29 @@ router.post("/", async (req, res) => {
         }
     );
 });
+
+
+// inloggon
+router.post('/login', (req, res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+
+        User.findOne({email: email, password: password}, function(err, user){
+            if (err) {
+                console.log(err);
+                return res.status(500).send();
+            }
+
+            if(!user) {
+                return res.status(404).send("Sorry, user doesn't exist.");
+            }
+            res.redirect('/account');
+        });
+
+    } catch (error) {
+        throw new Error(error);
+    }
+})
 
 module.exports = router;
