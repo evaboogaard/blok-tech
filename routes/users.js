@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 
 router.get('/createaccount', (req, res) => res.render('createaccount'))
 
-router.post("/", (req, res) => {
+router.post("/createaccount", (req, res) => {
     const user = new User({
         fname: req.body.fname,
         lname: req.body.lname,

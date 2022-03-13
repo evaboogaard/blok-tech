@@ -24,6 +24,7 @@
     --tag-color: #E2E2E2;
     --checkbox-color: white;
     --form-shadow: .2em .2em .4em rgba(0, 75, 136, 0.842);
+    --translucent-color: rgba(255, 255, 255, 0.274);
 
     --peach: #ee7752;
     --pink: #e73c7e;
@@ -130,6 +131,22 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 14em 1em 0 1em;
+    padding: 2em 1em 2em 1em;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: var(--translucent-color);
+    animation: weirdborder 10s infinite ease-in-out alternate;
+}
+
+@keyframes weirdborder{
+    0%{border-radius: 29% 71% 32% 68% / 72% 37% 63% 28%;}
+
+    100%{border-radius: 89% 11% 90% 10% / 13% 81% 19% 87%; }
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -180,7 +197,7 @@ form {
 
 .form-underlay {
     height: 48em;
-    background-color: rgba(255, 255, 255, 0.274);
+    background-color: var(--translucent-color);
     border-radius: 1em;
     margin: 0 1em 0 1em;
 }
@@ -220,6 +237,16 @@ button {
     left: 50%;
     bottom: 2%;
     box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
+}
+
+ul{
+    background-color: var(--translucent-color);
+    list-style: none;
+    padding: 6em 3em 6em 3em;
+}
+
+li{
+    margin: 1em 0 1em 0;
 }
 
 
@@ -361,6 +388,10 @@ header a img {
     top: 28%;
 }
 
+
+#delete button{
+    bottom: 30%;
+}
 
 
 
