@@ -44,7 +44,7 @@ Once you have cloned the repo you need to install the dependencies. You do this 
 In order to run the application you need to enter npm start in your terminal. Your url should look like this: localhost:1337
 
 ### Set up your .env
-Set up your .env file for a MongoDB connection, the file should include the following: MongoURI= <YOUR MONGO DB URI>
+Set up your .env file for a MongoDB connection, the file should include the following: MongoURI= < YOUR MONGO DB URI >
 
 ## 🚫 Rules
 If you read this, send me a meme (I'll know if you don't)
