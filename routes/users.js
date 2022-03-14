@@ -36,7 +36,6 @@ router.post("/createaccount", (req, res) => {
     );
 });
 
-
 // inloggon
 router.post('/login', (req, res) => {
     try {
@@ -63,7 +62,6 @@ router.post('/login', (req, res) => {
     }
 })
 
-
 // Deleton
 
 router.post('/delete', (req, res) => {
@@ -83,6 +81,7 @@ router.post('/delete', (req, res) => {
     res.redirect('/delete');
 
 });
+
 
 
 module.exports = router;

@@ -10,9 +10,9 @@ const router = express.Router();
 const port = process.env.PORT || 1337;
 const mongoose = require("mongoose");
 const app = express();
+const db = mongoose.connection;
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
-const db = mongoose.connection;
 
 db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to Database"));
@@ -42,21 +42,15 @@ app.set("views", "./views");
 
 app.use('/', require('./routes/users'))
 
-app.use((req, res, next) => {
-    res.locals.currentUser = req.user;
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.locals.currentUser = req.user;
+//     next();
+//   });
 
 // basic routing
 app.get("/", (req, res) => {
     res.render("home", {
         "title": "home"
-    });
-});
-
-app.get("/login", (req, res) => {
-    res.render("login", {
-        "title": "login"
     });
 });
 
@@ -69,6 +63,12 @@ app.get("/account", (req, res) => {
 app.get("/delete", (req, res) => {
     res.render("delete", {
         "title": "delete"
+    });
+});
+
+app.get("/login", (req, res) => {
+    res.render("login", {
+        "title": "login"
     });
 });
 
