@@ -7,12 +7,14 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "Eva Boogaard",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
     "camelcase": "^6.3.0",
     "dotenv": "^16.0.0",
@@ -22,7 +24,6 @@
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.5",
     "multer": "^1.4.4",
-    "passport": "^0.5.2",
     "slug": "^5.2.0"
   },
   "devDependencies": {

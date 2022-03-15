@@ -3,7 +3,10 @@ const app = express();
 const router = express.Router();
 const User = require("../models/user");
 const bodyParser = require("body-parser");
-// const passport = require("passport")
+const bcrypt = require("bcrypt")
+const saltRounds = 10;
+
+let session;
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -11,56 +14,58 @@ app.use(bodyParser.urlencoded({
 
 router.get('/createaccount', (req, res) => res.render('createaccount'))
 
-router.post("/createaccount", (req, res) => {
+router.post("/createaccount", async (req, res) => {
+    const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
     const user = new User({
         fname: req.body.fname,
         lname: req.body.lname,
         email: req.body.email,
-        password: req.body.password,
-        country: req.body.country
-    })
-    user.save().then(
-        () => {
-            res.render("account", {
+        password: hashedPassword,
+        discipline: req.body.discipline
+    });
+
+    user.save((error) => {
+        if (error) {
+            console.error(error);
+            return res.status(500).redirect('createaccount');
+        } else {
+            console.log("Account aangemaakt!")
+            session = req.session;
+            session.email = req.body.email;
+            return res.render("account", {
                 name: user.fname + " " + user.lname,
                 email: user.email,
-                country: user.country
-            })
-        }
-    ).catch(
-        (error) => {
-            res.status(400).json({
-                error: error
+                discipline: user.discipline
             });
         }
-    );
+    });
 });
 
-// inloggon
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     try {
-        const email = req.body.email;
-        const password = req.body.password;
-
-        User.findOne({
-            email: email,
-            password: password
-        }, function (err, user) {
-            if (err) {
-                console.log(err);
-                return res.status(500).send();
-            }
-
-            if (!user) {
-                return res.status(404).send("Sorry, user doesn't exist.");
-            }
-            res.redirect('/account');
-        });
-
+        const getUser = await User.findOne({ email: req.body.email });
+        if (getUser) {
+          const comparePassword = await bcrypt.compare(req.body.password, getUser.password);
+          if (comparePassword) {
+            console.log("It's a great success!");
+            session = req.session;
+            session.email = req.body.email;
+            return res.status(200).redirect('/account');
+          } else {
+            console.error("Wrong e-mail or password!");
+            return res.status(404).redirect('/login');
+          }
+        } else {
+            console.error("Wrong e-mail or password!!");
+            return res.status(404).redirect('/login');
+        }
     } catch (error) {
-        throw new Error(error);
+        console.error(error);
+        return res.status(500).redirect('/login');
     }
-})
+});
+
+
 
 // Deleton
 

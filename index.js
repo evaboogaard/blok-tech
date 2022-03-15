@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require("express");
 const { engine } = require("express-handlebars");
+const session = require('express-session');
 const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
@@ -24,6 +25,12 @@ app.use("/users", usersRouter);
 
 
 app.use(express.static(path.join(__dirname, "/static")));
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true
+  }))
 
 // supports arrays and objects
 app.use(bodyParser.urlencoded({
