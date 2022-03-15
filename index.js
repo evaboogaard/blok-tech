@@ -81,10 +81,6 @@ app.get("/login", (req, res) => {
     });
 });
 
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 //error handling
 app.use((req, res) => {
     res.status(404).send("Sorry, this page doesn't exist!");

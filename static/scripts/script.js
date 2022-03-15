@@ -37,18 +37,18 @@ const form = document.querySelector("form");
 // })
 
 form.addEventListener("submit", (event) => {
-	event.preventDefault();
-	const inputs = event.target.querySelectorAll("input");
-	const errorLabel = event.target.querySelector("label#error");
+	const inputFields = event.target.querySelectorAll("input");
+	const errorDiv = event.target.querySelector("div#error");
 
-	if (!inputs[0].value || !inputs[1].value) {
-        errorLabel.classList.add("errorLabel");
-		errorLabel.innerHTML = "<span>Error:</span> Input is empty.";
-		inputs.forEach(element => {
-			element.classList.add("fouteInput");
+	event.preventDefault();
+	if (!inputFields[0].value || !inputFields[1].value) {
+		errorDiv.classList.add("emptyinput");
+		errorDiv.innerHTML = "<span>Error:</span> Input is empty.";
+		inputFields.forEach(element => {
+			element.classList.add("wronginput");
 		});
-	} 
-	else {
+		console.log("inputs are read and i am gay")
+	} else {
 		event.target.submit();
 	}
 });
