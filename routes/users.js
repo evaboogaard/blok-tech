@@ -76,10 +76,13 @@ router.post('/delete', (req, res) => {
     //     email: email
     // })
 
-    User.findOneAndDelete({id: req.body._id }).then();
-
-    res.redirect('/delete');
-
+    User.findOneAndDelete({id: req.body._id }).then(
+        res.redirect('/delete')
+    ).catch((error) => {
+        res.status(400).json({
+            error: error
+        });
+    })
 });
 
 

@@ -12,3 +12,26 @@ form.addEventListener("submit", (event) => {
         console.log("tick the box baby")
 	}
 });
+
+// form.addEventListener("submit", (event) => {
+// 	const password = form.password.value;
+// 	const confirmpassword = form.confirmpassword.value;
+
+// 	const passwordinput = document.querySelector("#password");
+// 	const confirmpasswordinput = document.querySelector("#confirmpassword");
+
+// 	event.preventDefault()
+
+// 	// If Not same return False.    
+// 	if (password != confirmpassword) {
+// 		passwordinput.classList.add("passworderror");
+// 		confirmpasswordinput.classList.add("passworderror");
+// 		return false;
+// 	}
+// 	// If same return True.
+// 	else {
+// 		passwordinput.classList.remove("passworderror");
+// 		confirmpasswordinput.classList.remove("passworderror");
+// 		return true;
+// 	}
+// })

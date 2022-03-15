@@ -24,6 +24,8 @@ app.use("/users", usersRouter);
 
 
 app.use(express.static(path.join(__dirname, "/static")));
+
+// supports arrays and objects
 app.use(bodyParser.urlencoded({
     extended: true
 }));
