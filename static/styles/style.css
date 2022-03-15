@@ -255,8 +255,8 @@ li{
 #lname:invalid,
 #email:invalid,
 #password:invalid,
-#date:invalid,
-#country:invalid {
+#confirmpassword:invalid,
+#discipline:invalid {
     outline: .1px solid red;
 }
 
@@ -264,8 +264,8 @@ li{
 #lname:valid,
 #email:valid,
 #password:valid,
-#date:valid,
-#country:valid {
+#confirmpassword:valid,
+#discipline:valid {
     outline: 2px solid green;
 }
 
@@ -392,34 +392,6 @@ header a img {
 #delete button{
     bottom: 30%;
 }
-
-
-
-
-
-
-
-
-
-/* file add styling */
-/* .invisible {
-    display: none;
-}
-
-.createprofile3 {
-    margin: 2em;
-}
-
-.fileinput {
-    background-color: var(--input-color);
-    display: flex;
-    padding: 2em;
-    margin: .5em 0 .5em 0;
-    width: 5em;
-    height: 5em;
-    border-radius: .3em;
-    box-shadow: 0 .1em .5em var(--shadow-color);
-} */
 
 #error {
     border-radius: 2em;
