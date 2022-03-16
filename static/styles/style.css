@@ -32,6 +32,8 @@
     --pink: #e73c7e;
     --blue: #23a6d5;
     --mint: #23d5ab;
+
+    --shake: shake 0.2s ease-in-out 0s 2;
 }
 
 /*
@@ -106,6 +108,16 @@
           GENERAL STYLING
 ###############
 */
+
+
+@keyframes shake {
+    0% { margin-left: 0em; }
+    25% { margin-left: 0.5em; }
+    75% { margin-left: -0.5em; }
+    100% { margin-left: 0em; }
+  }
+
+
 
 body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -275,11 +287,21 @@ div.gettingstarted.show {
 
 .welcomelogo.hide,
 .welcomebutton.hide {
-    bottom: -80%;
+    animation: hide 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+0%{bottom: 30%;}
+
+5%{bottom: 35%;}
+
+100%{bottom: -80%;}
 }
 
 .welcomelogo {
-    bottom: 40%;
+    padding-bottom: 13%;
+    bottom: 30%;
     position: absolute;
     width: 20em;
     left: 47%;
@@ -379,7 +401,7 @@ li {
 
 input.passworderror{
     background-color: var(--error-color);
-    animation: shake 0.2s ease-in-out 0s 2;
+    animation: var(--shake);
 }
 
 #fname:invalid,
@@ -411,8 +433,8 @@ input.passworderror{
     height: 2.5em;
     margin-bottom: 2em;
     border: 0.1em solid var(--dark-color);
-    padding: 0.5em 0.5em 0.5em 1em;
-    left: 50%;
+    padding: 0.5em 1em 0.5em 2em;
+    left: 48%;
     transform: translate(-50%, -50%);
     background-color: var(--pink);
     display: none;
@@ -425,15 +447,8 @@ input.passworderror{
 .wronginput {
     outline: 0.2em solid var(--error-color) !important;
     box-shadow: 0 0 1em var(--error-color);
-    animation: shake 0.2s ease-in-out 0s 2;
+    animation: var(--shake);
 }
-
-@keyframes shake {
-    0% { margin-left: 0em; }
-    25% { margin-left: 0.5em; }
-    75% { margin-left: -0.5em; }
-    100% { margin-left: 0em; }
-  }
 
 
 .terms {
