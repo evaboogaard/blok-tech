@@ -1,6 +1,6 @@
 # blok-tech
 
-🚨_View this application on 414 x 896 size (iPhone XR)_🚨
+🚨View this application on 414 x 896 size (iPhone XR)🚨
 
 
 Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this project I will be creating a login feature within a matching application. Feel free to look around or check out the [wiki](https://github.com/evaboogaard/blok-tech/wiki), which contains a lot of information about the process.
