@@ -30,7 +30,7 @@ form.addEventListener("submit", (event) => {
 	} 
 	
 	else if (terms.checked == false) {
-		fullTermsAndCons.classList.add("error")
+		fullTermsAndCons.classList.add("error");
 	} 
 	
 	else {
