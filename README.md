@@ -3,8 +3,9 @@
 Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this project I will be creating a login feature within a matching application. Feel free to look around or check out the [wiki](https://github.com/evaboogaard/blok-tech/wiki), which contains a lot of information about the process.
 
 <section align="center">
-<img width="500px" alt="" src="https://user-images.githubusercontent.com/94062754/156223856-9e7bb4f2-2f4e-476a-8f8f-1c878ed22167.png">
+<img width="700px" alt="" src="https://user-images.githubusercontent.com/94062754/158617400-d5e89791-211e-44ee-8340-b1344a840ead.png">
 </section>
+
 
 <section align="center">
       <a href="https://github.com/evaboogaard/blok-tech/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/evaboogaard/blok-tech"></a>
@@ -23,7 +24,7 @@ Hi :) Welcome to the code of the CMD "Project-Tech". For the duration of this pr
 - [📦 Sources](https://github.com/evaboogaard/blok-tech#-sources)
 
 ## 🎨 Description
-This is a mobile application for creative people that work within different disciplines to find each other and work together. 
+Artist Match is a mobile application for creative people that work within different disciplines to find each other and work together. 
 
 In the creative field artists could greatly benefit from working with other art disciplines. In reality, this is very hard to find because everyone is in their own bubble and artists aren't exactly known for being great at networking or selling themselves. Multidisciplinary work can improve inspiration and also result into a bigger opportunity for profit.
 
