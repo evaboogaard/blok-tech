@@ -49,7 +49,7 @@ form.addEventListener("submit", (event) => {
 		});
 	} 
 	
-	if(terms.checked == false) {
+	else if(terms.checked == false) {
 		fullTermsAndCons.classList.add("error")
 	}
 

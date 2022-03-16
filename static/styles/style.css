@@ -25,6 +25,8 @@
     --checkbox-color: white;
     --form-shadow: .2em .2em .4em rgba(0, 75, 136, 0.842);
     --translucent-color: rgba(255, 255, 255, 0.274);
+    --error-color: rgb(179, 0, 0);
+    --dark-color: black;
 
     --peach: #ee7752;
     --pink: #e73c7e;
@@ -403,7 +405,7 @@ li {
     border-radius: .5em;
     height: 2.5em;
     margin-bottom: 2em;
-    border: 0.1em solid var(--pink);
+    border: 0.1em solid var(--dark-color);
     padding: 0.5em 0.5em 0.5em 1em;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -416,7 +418,8 @@ li {
 }
 
 .wronginput {
-    outline: 0.3em solid var(--pink) !important;
+    outline: 0.2em solid var(--error-color) !important;
+    box-shadow: 0 0 1em var(--error-color);
 }
 
 
