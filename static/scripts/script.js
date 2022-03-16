@@ -1,9 +1,6 @@
-// const terms = document.querySelector("#terms")
+const terms = document.querySelector("#terms")
 const form = document.querySelector("form");
-
-
-
-// const fullTermsAndCons = document.querySelector(".terms")
+const fullTermsAndCons = document.querySelector(".terms")
 
 // form.addEventListener("submit", (event) => {
 //   event.preventDefault()
@@ -50,8 +47,13 @@ form.addEventListener("submit", (event) => {
 		inputFields.forEach(element => {
 			element.classList.add("wronginput");
 		});
-		console.log("inputs are read and i am gay")
-	} else {
+	} 
+	
+	if(terms.checked == false) {
+		fullTermsAndCons.classList.add("error")
+	}
+
+	else {
 		event.target.submit();
 	}
 });
