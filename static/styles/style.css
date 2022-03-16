@@ -99,7 +99,11 @@
     src: url(../assets/Poppins-Black.ttf);
 }
 
-
+/*
+###############
+          GENERAL STYLING
+###############
+*/
 
 body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -141,11 +145,38 @@ p {
     animation: weirdborder 10s infinite ease-in-out alternate;
 }
 
-@keyframes weirdborder{
-    0%{border-radius: 29% 71% 32% 68% / 72% 37% 63% 28%;}
+@keyframes weirdborder {
+    0% {
+        border-radius: 29% 71% 32% 68% / 72% 37% 63% 28%;
+    }
 
-    100%{border-radius: 89% 11% 90% 10% / 13% 81% 19% 87%; }
+    100% {
+        border-radius: 89% 11% 90% 10% / 13% 81% 19% 87%;
+    }
 }
+
+h1 {
+    font-size: 1.5em;
+    margin-top: .2em;
+    padding: 1em;
+    z-index: 5;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+/*
+###############
+          header/nav
+###############
+*/
 
 header {
     display: flex;
@@ -158,13 +189,17 @@ header {
     height: 5.5em;
 }
 
-h1 {
-    font-size: 1.5em;
-    margin-top: .2em;
-    padding: 1em;
-    z-index: 5;
-    text-align: center;
-    color: rgb(0, 0, 0);
+header img {
+    position: absolute;
+    width: 7em;
+    top: 13%;
+}
+
+header a img {
+    width: 3em;
+    position: absolute;
+    left: 7%;
+    top: 28%;
 }
 
 nav {
@@ -187,6 +222,89 @@ nav a {
 }
 
 
+
+
+
+
+
+
+/*
+###############
+          STARTING SCREEN
+###############
+*/
+
+div.gettingstarted {
+    opacity: 0%;
+    transition: 1s;
+    transition-delay: 2s;
+}
+
+div.gettingstarted.show {
+    opacity: 100%;
+}
+
+div .accountbutton {
+    padding: 1em 3em 1em 3em;
+    position: absolute;
+    border-radius: 2em;
+    border: none;
+    width: 70%;
+    background-size: 200% 200%;
+    background-position: left top;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+    box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
+}
+
+div .accountbutton:first-of-type {
+    top: 40%;
+    background: linear-gradient(var(--pink), var(--peach));
+}
+
+div .accountbutton:last-of-type {
+    top: 55%;
+    background: linear-gradient(var(--blue), var(--mint));
+}
+
+.welcomelogo.hide,
+.welcomebutton.hide {
+    bottom: -80%;
+}
+
+.welcomelogo {
+    bottom: 50%;
+    position: absolute;
+    width: 20em;
+    left: 7%;
+    transition: 3s;
+}
+
+.welcomebutton{
+    bottom: 30%;
+    transition: 3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+###############
+          FORMS
+###############
+*/
 
 form {
     display: flex;
@@ -239,17 +357,22 @@ button {
     box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
 }
 
-ul{
+ul {
     background-color: var(--translucent-color);
     list-style: none;
     padding: 6em 3em 6em 3em;
 }
 
-li{
+li {
     margin: 1em 0 1em 0;
 }
 
 
+
+
+
+
+/* PROGRESSIVE ENHANCEMENT/ERROR HANDLING */
 
 #fname:invalid,
 #lname:invalid,
@@ -267,6 +390,32 @@ li{
 #confirmpassword:valid,
 #discipline:valid {
     outline: 2px solid green;
+}
+
+#delete button {
+    bottom: 30%;
+}
+
+#error {
+    position: absolute;
+    top: 83.5%;
+    border-radius: .5em;
+    height: 2.5em;
+    margin-bottom: 2em;
+    border: 0.1em solid var(--pink);
+    padding: 0.5em 0.5em 0.5em 1em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--pink);
+    display: none;
+}
+
+.emptyinput {
+    display: unset !important;
+}
+
+.wronginput {
+    outline: 0.3em solid var(--pink) !important;
 }
 
 
@@ -293,16 +442,6 @@ li{
 .terms label {
     width: auto;
     left: 15%;
-}
-
-@keyframes move-gradient {
-    0% {
-        background-position: left bottom;
-    }
-
-    100% {
-        background-position: right top;
-    }
 }
 
 .error {
@@ -345,72 +484,40 @@ li{
     animation: move-gradient 2s linear infinite;
 }
 
+@keyframes move-gradient {
+    0% {
+        background-position: left bottom;
+    }
+
+    100% {
+        background-position: right top;
+    }
+}
+
 /* code inspiration source: https://codepen.io/alphardex/pen/vYEYGzp */
 
-.account{
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+###############
+          ACCOUNT OVERVIEW
+###############
+*/
+
+
+.account {
     text-align: center;
     font-size: 1.2em;
     font-weight: 400;
     margin: 0 1em 0 1em;
 }
-
-.accountbutton{
-    padding: 1em 3em 1em 3em;
-    position: absolute;
-    border-radius: 2em;
-    border: none;
-    width: 70%;
-    background-size: 200% 200%;
-    background-position: left top;
-    font-size: 1.2em;
-    color: white;
-    font-weight: 600;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    text-align: center;
-    box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
-}
-
-.accountbutton:first-of-type{
-    top: 40%;
-    background: linear-gradient(var(--pink), var(--peach));
-}
-
-.accountbutton:last-of-type{
-    top: 55%;
-    background: linear-gradient(var(--blue), var(--mint));
-}
-
-header a img {
-    width: 3em;
-    position: absolute;
-    left: 7%;
-    top: 28%;
-}
-
-
-#delete button{
-    bottom: 30%;
-}
-
-#error {
-    position: absolute;
-    top: 83.5%;
-    border-radius: .5em;
-    height: 2.5em;
-    margin-bottom: 2em;
-    border: 0.1em solid var(--pink);
-    padding: 0.5em 0.5em 0.5em 1em;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--pink);
-    display: none;
-  }
-  
-  .emptyinput {
-    display: unset !important;
-  }
-  
-  .wronginput {
-    outline: 0.3em solid var(--pink) !important;
-  }

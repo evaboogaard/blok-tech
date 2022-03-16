@@ -1,5 +1,8 @@
 // const terms = document.querySelector("#terms")
 const form = document.querySelector("form");
+
+
+
 // const fullTermsAndCons = document.querySelector(".terms")
 
 // form.addEventListener("submit", (event) => {
