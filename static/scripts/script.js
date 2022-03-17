@@ -2,6 +2,20 @@ const terms = document.querySelector("#terms")
 const form = document.querySelector("form");
 const fullTermsAndCons = document.querySelector(".terms")
 
+// immediately unrequiring the form in HTML as soon as the script is enabled
+function unrequire (){
+	document.getElementById("fname").removeAttribute("required");
+	document.getElementById("lname").removeAttribute("required");
+	document.getElementById("email").removeAttribute("required");
+	document.getElementById("password").removeAttribute("required");
+	document.getElementById("confirmpassword").removeAttribute("required");
+	document.getElementById("discipline").removeAttribute("required");
+	document.getElementById("terms").removeAttribute("required");
+}
+unrequire();
+
+
+
 form.addEventListener("submit", (event) => {
 	const inputFields = event.target.querySelectorAll("input");
 	const errorDiv = event.target.querySelector("div#error");
