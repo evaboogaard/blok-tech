@@ -132,7 +132,7 @@
 
 @keyframes shake {
     0% {
-        margin-left: 0em;
+        margin-left: 0em
     }
 
     25% {
@@ -151,15 +151,17 @@
 
 
 body {
-    font-family: Poppins, Arial, Helvetica, sans-serif;
+    height: 26em;
     background: linear-gradient(-45deg,
             var(--peach),
             var(--pink),
             var(--blue),
             var(--mint));
     background-size: 400% 400%;
+
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+
     animation: bg-animation 15s ease infinite;
-    height: 26em;
 }
 
 @keyframes bg-animation {
@@ -183,10 +185,12 @@ a {
 p {
     margin: 14em 1em 0 1em;
     padding: 2em 1em 2em 1em;
+    background-color: var(--translucent-color);
+
     font-style: italic;
     font-size: 1.2em;
     text-align: center;
-    background-color: var(--translucent-color);
+
     animation: weirdborder 10s infinite ease-in-out alternate;
 }
 
@@ -201,10 +205,11 @@ p {
 }
 
 h1 {
-    font-size: 1.5em;
     margin-top: .2em;
     padding: 1em;
     z-index: 5;
+
+    font-size: 1.5em;
     text-align: center;
     color: rgb(0, 0, 0);
 }
@@ -232,12 +237,14 @@ h1 {
 header {
     display: flex;
     justify-content: center;
+
     position: relative;
+    height: 5.5em;
     margin-bottom: 1em;
     z-index: 10;
+
     background-color: var(--header-color);
     box-shadow: var(--header-shadow);
-    height: 5.5em;
 
     img {
         position: absolute;
@@ -246,23 +253,24 @@ header {
     }
 
     a img {
-        width: 3em;
         position: absolute;
+        width: 3em;
         left: 7%;
         top: 28%;
     }
 }
 
 nav {
-    position: fixed;
-    bottom: 0;
-    height: 7em;
-    background-color: #ffffffb9;
-    width: 100%;
-
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    position: fixed;
+    height: 7em;
+    width: 100%;
+    bottom: 0;
+
+    background-color: #ffffffb9;
 
     a img {
         height: 3.4em;
@@ -300,20 +308,24 @@ div.gettingstarted.show {
 }
 
 .accountbutton {
-    padding: 1em 3em 1em 3em;
     position: absolute;
-    border-radius: 2em;
-    border: none;
     width: 70%;
+    padding: 1em 3em 1em 3em;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
     background-size: 200% 200%;
     background-position: left top;
+    
+
+    border-radius: 2em;
+    border: none;
+    box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
+
+    text-align: center;
     font-size: 1.2em;
     color: white;
     font-weight: 600;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    text-align: center;
-    box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
 }
 
 .accountbutton:first-of-type {
@@ -347,11 +359,13 @@ div.gettingstarted.show {
 }
 
 .welcomelogo {
-    padding-bottom: 13%;
-    bottom: 30%;
     position: absolute;
     width: 20em;
     left: 47%;
+
+    padding-bottom: 13%;
+    bottom: 30%;
+   
     transition: 3s;
     transform: translate(-50%, -50%);
 }
@@ -386,10 +400,10 @@ form {
 }
 
 .form-underlay {
+    margin: 0 1em 0 1em;
     height: 48em;
     background-color: var(--translucent-color);
     border-radius: 1em;
-    margin: 0 1em 0 1em;
 }
 
 label {
@@ -399,11 +413,11 @@ label {
 }
 
 input {
-    background-color: var(--input-color);
-    border-radius: 1em;
     padding: 1.2em 1em 1.2em 1em;
     width: 100%;
+    border-radius: 1em;
     border: 0;
+    background-color: var(--input-color);
     box-shadow: var(--form-shadow);
 }
 
@@ -412,27 +426,31 @@ form p {
 }
 
 button {
-    padding: 1em 3em 1em 3em;
     position: absolute;
-    border-radius: 2em;
-    border: none;
     width: 60%;
-    background: linear-gradient(var(--pink), var(--blue));
-    background-size: 200% 200%;
-    background-position: left top;
-    font-size: 1.3em;
-    color: white;
-    font-weight: 600;
+    padding: 1em 3em 1em 3em;
+
     transform: translate(-50%, -50%);
     left: 50%;
     bottom: 2%;
+
+    background: linear-gradient(var(--pink), var(--blue));
+    background-size: 200% 200%;
+    background-position: left top;
+
     box-shadow: 0 .2em .3em rgba(41, 41, 41, 0.753);
+    border-radius: 2em;
+    border: none;
+    
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
 }
 
 ul {
+    padding: 6em 3em 6em 3em;
     background-color: var(--translucent-color);
     list-style: none;
-    padding: 6em 3em 6em 3em;
 }
 
 li {
@@ -478,14 +496,16 @@ input.passworderror {
 #error {
     position: absolute;
     top: 83.5%;
-    border-radius: .5em;
-    height: 2.5em;
-    margin-bottom: 2em;
-    border: 0.1em solid var(--dark-color);
-    padding: 0.5em 1em 0.5em 2em;
     left: 48%;
+    height: 2.5em;
+    padding: 0.5em 1em 0.5em 2em;
+    margin-bottom: 2em;
     transform: translate(-50%, -50%);
+
+    border: 0.1em solid var(--dark-color);
+    border-radius: .5em;
     background-color: var(--pink);
+
     display: none;
 }
 
@@ -501,22 +521,23 @@ input.passworderror {
 
 
 .terms {
-    box-shadow: none;
+    position: relative;
     margin: 0;
     padding: 0;
     height: 4em;
-    position: relative;
     margin: 2em 0 1em 0;
+
+    box-shadow: none;
     font-size: .8em;
 
     input,
     label {
         position: absolute;
         width: 1em;
-        margin: 0;
-        padding: 0;
         top: 40%;
         left: 5%;
+        margin: 0;
+        padding: 0;
     }
 
     label {
@@ -533,8 +554,8 @@ input.passworderror {
             var(--blue),
             var(--mint));
     background-size: 400% 400%;
-    animation: bg-animation 15s ease infinite;
     border-radius: var(--border-width);
+    animation: bg-animation 15s ease infinite;
 }
 
 .error::after {
@@ -597,8 +618,8 @@ input.passworderror {
 
 
 .account {
+    margin: 0 1em 0 1em;
     text-align: center;
     font-size: 1.2em;
     font-weight: 400;
-    margin: 0 1em 0 1em;
 }

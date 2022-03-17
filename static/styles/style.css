@@ -135,12 +135,12 @@
 }
 
 body {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  height: 26em;
   background: linear-gradient(-45deg, var(--peach), var(--pink), var(--blue), var(--mint));
   background-size: 400% 400%;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   -webkit-animation: bg-animation 15s ease infinite;
           animation: bg-animation 15s ease infinite;
-  height: 26em;
 }
 
 @-webkit-keyframes bg-animation {
@@ -174,10 +174,10 @@ a {
 p {
   margin: 14em 1em 0 1em;
   padding: 2em 1em 2em 1em;
+  background-color: var(--translucent-color);
   font-style: italic;
   font-size: 1.2em;
   text-align: center;
-  background-color: var(--translucent-color);
   -webkit-animation: weirdborder 10s infinite ease-in-out alternate;
           animation: weirdborder 10s infinite ease-in-out alternate;
 }
@@ -201,10 +201,10 @@ p {
 }
 
 h1 {
-  font-size: 1.5em;
   margin-top: .2em;
   padding: 1em;
   z-index: 5;
+  font-size: 1.5em;
   text-align: center;
   color: black;
 }
@@ -222,12 +222,12 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  height: 5.5em;
   margin-bottom: 1em;
   z-index: 10;
   background-color: var(--header-color);
   -webkit-box-shadow: var(--header-shadow);
           box-shadow: var(--header-shadow);
-  height: 5.5em;
 }
 
 header img {
@@ -237,18 +237,13 @@ header img {
 }
 
 header a img {
-  width: 3em;
   position: absolute;
+  width: 3em;
   left: 7%;
   top: 28%;
 }
 
 nav {
-  position: fixed;
-  bottom: 0;
-  height: 7em;
-  background-color: #ffffffb9;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,6 +253,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  height: 7em;
+  width: 100%;
+  bottom: 0;
+  background-color: #ffffffb9;
 }
 
 nav a img {
@@ -283,22 +283,22 @@ div.gettingstarted.show {
 }
 
 .accountbutton {
-  padding: 1em 3em 1em 3em;
   position: absolute;
-  border-radius: 2em;
-  border: none;
   width: 70%;
-  background-size: 200% 200%;
-  background-position: left top;
-  font-size: 1.2em;
-  color: white;
-  font-weight: 600;
+  padding: 1em 3em 1em 3em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
-  text-align: center;
+  background-size: 200% 200%;
+  background-position: left top;
+  border-radius: 2em;
+  border: none;
   -webkit-box-shadow: 0 0.2em 0.3em rgba(41, 41, 41, 0.753);
           box-shadow: 0 0.2em 0.3em rgba(41, 41, 41, 0.753);
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 600;
 }
 
 .accountbutton:first-of-type {
@@ -346,11 +346,11 @@ div.gettingstarted.show {
 }
 
 .welcomelogo {
-  padding-bottom: 13%;
-  bottom: 30%;
   position: absolute;
   width: 20em;
   left: 47%;
+  padding-bottom: 13%;
+  bottom: 30%;
   -webkit-transition: 3s;
   transition: 3s;
   -webkit-transform: translate(-50%, -50%);
@@ -381,10 +381,10 @@ form {
 }
 
 .form-underlay {
+  margin: 0 1em 0 1em;
   height: 48em;
   background-color: var(--translucent-color);
   border-radius: 1em;
-  margin: 0 1em 0 1em;
 }
 
 label {
@@ -394,11 +394,11 @@ label {
 }
 
 input {
-  background-color: var(--input-color);
-  border-radius: 1em;
   padding: 1.2em 1em 1.2em 1em;
   width: 100%;
+  border-radius: 1em;
   border: 0;
+  background-color: var(--input-color);
   -webkit-box-shadow: var(--form-shadow);
           box-shadow: var(--form-shadow);
 }
@@ -408,30 +408,30 @@ form p {
 }
 
 button {
-  padding: 1em 3em 1em 3em;
   position: absolute;
-  border-radius: 2em;
-  border: none;
   width: 60%;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--pink)), to(var(--blue)));
-  background: linear-gradient(var(--pink), var(--blue));
-  background-size: 200% 200%;
-  background-position: left top;
-  font-size: 1.3em;
-  color: white;
-  font-weight: 600;
+  padding: 1em 3em 1em 3em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
   bottom: 2%;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--pink)), to(var(--blue)));
+  background: linear-gradient(var(--pink), var(--blue));
+  background-size: 200% 200%;
+  background-position: left top;
   -webkit-box-shadow: 0 0.2em 0.3em rgba(41, 41, 41, 0.753);
           box-shadow: 0 0.2em 0.3em rgba(41, 41, 41, 0.753);
+  border-radius: 2em;
+  border: none;
+  font-size: 1.3em;
+  color: white;
+  font-weight: 600;
 }
 
 ul {
+  padding: 6em 3em 6em 3em;
   background-color: var(--translucent-color);
   list-style: none;
-  padding: 6em 3em 6em 3em;
 }
 
 li {
@@ -470,14 +470,14 @@ input.passworderror {
 #error {
   position: absolute;
   top: 83.5%;
-  border-radius: .5em;
-  height: 2.5em;
-  margin-bottom: 2em;
-  border: 0.1em solid var(--dark-color);
-  padding: 0.5em 1em 0.5em 2em;
   left: 48%;
+  height: 2.5em;
+  padding: 0.5em 1em 0.5em 2em;
+  margin-bottom: 2em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  border: 0.1em solid var(--dark-color);
+  border-radius: .5em;
   background-color: var(--pink);
   display: none;
 }
@@ -495,13 +495,13 @@ input.passworderror {
 }
 
 .terms {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  position: relative;
   margin: 0;
   padding: 0;
   height: 4em;
-  position: relative;
   margin: 2em 0 1em 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: .8em;
 }
 
@@ -509,10 +509,10 @@ input.passworderror {
 .terms label {
   position: absolute;
   width: 1em;
-  margin: 0;
-  padding: 0;
   top: 40%;
   left: 5%;
+  margin: 0;
+  padding: 0;
 }
 
 .terms label {
@@ -524,9 +524,9 @@ input.passworderror {
   --border-width: .2em;
   background: linear-gradient(-45deg, var(--peach), var(--pink), var(--blue), var(--mint));
   background-size: 400% 400%;
+  border-radius: var(--border-width);
   -webkit-animation: bg-animation 15s ease infinite;
           animation: bg-animation 15s ease infinite;
-  border-radius: var(--border-width);
 }
 
 .error::after {
@@ -570,9 +570,9 @@ input.passworderror {
 ###############
 */
 .account {
+  margin: 0 1em 0 1em;
   text-align: center;
   font-size: 1.2em;
   font-weight: 400;
-  margin: 0 1em 0 1em;
 }
 /*# sourceMappingURL=style.css.map */
