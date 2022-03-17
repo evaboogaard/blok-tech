@@ -56,7 +56,7 @@ Set up your .env file for a MongoDB connection, the file should include the foll
             </code></pre>
 
 ## 🚫 Rules
-If you read this, send me a meme (I'll know if you don't)
+If you use anything from my code or my wiki, just give me either a shoutout or a dirty chai with soy milk. :)
 
 ## 🗄 Database
 The database used for the creation of this application is [MongoDB.](https://www.mongodb.com/)
