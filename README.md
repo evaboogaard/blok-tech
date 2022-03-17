@@ -39,7 +39,10 @@ Create a folder in wich you want to place this project. This way you will be abl
 ### Clone the repository
 You can install the application either by downloading the ZIP, or if you want to clone it in the CLI; you should run the following code:
 
+            <pre><code>
+
 gh repo clone evaboogaard/blok-tech
+            </code></pre>
 
 ### Install dependencies
 Once you have cloned the repo you need to install the dependencies. You do this by running npm install in the terminal.
@@ -48,7 +51,10 @@ Once you have cloned the repo you need to install the dependencies. You do this 
 In order to run the application you need to enter npm start in your terminal. Your url should look like this: localhost:1337
 
 ### Set up your .env
-Set up your .env file for a MongoDB connection, the file should include the following: MongoURI= < YOUR MONGO DB URI >
+Set up your .env file for a MongoDB connection, the file should include the following: 
+             <pre><code>
+            MongoURI= < YOUR MONGO DB URI >
+            </code></pre>
 
 ## 🚫 Rules
 If you read this, send me a meme (I'll know if you don't)
