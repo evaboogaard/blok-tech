@@ -39,10 +39,9 @@ Create a folder in wich you want to place this project. This way you will be abl
 ### Clone the repository
 You can install the application either by downloading the ZIP, or if you want to clone it in the CLI; you should run the following code:
 
-            <pre><code>
-
+<pre><code>
 gh repo clone evaboogaard/blok-tech
-            </code></pre>
+</code></pre>
 
 ### Install dependencies
 Once you have cloned the repo you need to install the dependencies. You do this by running npm install in the terminal.
