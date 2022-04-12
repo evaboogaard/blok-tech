@@ -18,12 +18,12 @@
 :root {
   --input-color: white;
   --header-color: #ffffff70;
-  --header-shadow: inset 0 -.2em 1em rgba(65, 65, 65, 0.267);
+  --header-shadow: inset 0 -0.2em 1em rgba(65, 65, 65, 0.267);
   --background-color: rgb(250, 247, 244);
   --button-color: #9b8165;
-  --tag-color: #E2E2E2;
+  --tag-color: #e2e2e2;
   --checkbox-color: white;
-  --form-shadow: .2em .2em .4em rgba(0, 75, 136, 0.842);
+  --form-shadow: 0.2em 0.2em 0.4em rgba(0, 75, 136, 0.842);
   --translucent-color: rgba(255, 255, 255, 0.274);
   --error-color: rgb(179, 0, 0);
   --dark-color: black;
@@ -135,12 +135,16 @@
 }
 
 body {
-  height: 26em;
   background: linear-gradient(-45deg, var(--peach), var(--pink), var(--blue), var(--mint));
   background-size: 400% 400%;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   -webkit-animation: bg-animation 15s ease infinite;
           animation: bg-animation 15s ease infinite;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 @-webkit-keyframes bg-animation {
@@ -201,7 +205,7 @@ p {
 }
 
 h1 {
-  margin-top: .2em;
+  margin-top: 0.2em;
   padding: 1em;
   z-index: 5;
   font-size: 1.5em;
@@ -388,7 +392,7 @@ form {
 }
 
 label {
-  margin: 1em 0 .3em 0;
+  margin: 1em 0 0.3em 0;
   font-size: 1em;
   font-weight: 400;
 }
@@ -451,7 +455,7 @@ input.passworderror {
 #password:invalid,
 #confirmpassword:invalid,
 #discipline:invalid {
-  outline: .1px solid red;
+  outline: 0.1px solid red;
 }
 
 #fname:valid,
@@ -477,7 +481,7 @@ input.passworderror {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: 0.1em solid var(--dark-color);
-  border-radius: .5em;
+  border-radius: 0.5em;
   background-color: var(--pink);
   display: none;
 }
@@ -502,7 +506,7 @@ input.passworderror {
   margin: 2em 0 1em 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .terms input,
@@ -521,7 +525,7 @@ input.passworderror {
 }
 
 .error {
-  --border-width: .2em;
+  --border-width: 0.2em;
   background: linear-gradient(-45deg, var(--peach), var(--pink), var(--blue), var(--mint));
   background-size: 400% 400%;
   border-radius: var(--border-width);
@@ -574,5 +578,63 @@ input.passworderror {
   text-align: center;
   font-size: 1.2em;
   font-weight: 400;
+}
+
+.chat {
+  overflow: scroll;
+}
+
+.chat li {
+  width: 100%;
+  height: 15em;
+  background-color: white;
+  position: relative;
+  border-radius: 0.5em;
+}
+
+.chat li * {
+  position: absolute;
+}
+
+.chat li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 8em;
+  height: 10em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 1em;
+  border-radius: 0.5em;
+}
+
+.chat li h2 {
+  left: 6.5em;
+  top: 3em;
+}
+
+.chat li p {
+  background-color: transparent;
+  -webkit-animation: none;
+          animation: none;
+  padding: 0;
+  margin: 0;
+  left: 8em;
+  top: 6em;
+  text-align: left;
+}
+
+.chat li:last-of-type {
+  margin-bottom: 6em;
+}
+
+.animate {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+
+.animate.fade {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

@@ -81,6 +81,12 @@ app.get("/login", (req, res) => {
     });
 });
 
+app.get("/chat", (req, res) => {
+    res.render("chat", {
+        "title": "chat"
+    });
+});
+
 //error handling
 app.use((req, res) => {
     res.status(404).send("Sorry, this page doesn't exist!");
